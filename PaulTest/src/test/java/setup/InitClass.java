@@ -21,7 +21,6 @@ public class InitClass {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, Duration.of(20, ChronoUnit.SECONDS));
-        driver.get("https://www.paul-cz.com/");
     }
 
     public static void tearDown() {

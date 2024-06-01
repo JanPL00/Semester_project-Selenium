@@ -23,6 +23,7 @@ public class PaulHomePage {
 
     public PaulHomePage(WebDriver driver) {
         this.driver = driver;
+        driver.get("https://www.paul-cz.com/");
         PageFactory.initElements(driver, this);
     }
 

@@ -10,7 +10,5 @@ public class GeneralMethods {
             webElement.click();
         }
     }
-    public  void fillFormField(String text, By xpath) {
 
-    }
 }
