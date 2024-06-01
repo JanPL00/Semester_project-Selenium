@@ -66,7 +66,7 @@ public class AccountTest {
     private void testUser(String email) {
         try {
             String wecomeMsg = driver.findElement(By.xpath("/html/body/div[2]/div/div/p[1]/strong[1]")).getText();
-            assertEquals( wecomeMsg, email, "Registration was successful");
+            assertEquals( wecomeMsg, email, "Registration failed.");
         } catch (NoSuchElementException e) {
             fail("Registration failed.");
         }
