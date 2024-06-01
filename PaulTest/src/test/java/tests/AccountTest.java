@@ -22,10 +22,8 @@ public class AccountTest {
         accountPage = new AccountPage(driver);
     }
 
-//    @AfterEach
-//    public void finish() {
-//        InitClass.tearDown();
-//    }
+    @AfterEach
+    public void finish() {InitClass.tearDown();}
 
     @Test
     public void testRegistration() {
@@ -42,7 +40,7 @@ public class AccountTest {
         testUser(logInUser());
     }
     @Test
-    public void testPwdChnage() { // tohle nefunguje kvuli erroru na strankach, nevim ale jak overit ze se to podarilo
+    public void testPwdChnage() { // tohle nefunguje kvuli erroru na strankach, nevim jak overit ze se to podarilo
         logInUser();
         accountPage.clickDetails();
         accountPage.fillName("Name");

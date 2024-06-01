@@ -21,6 +21,11 @@ public class PaulHomePage {
     @FindBy(xpath = "/html/body/header/div/div/div[1]/form/button")
     private WebElement searchBtn;
 
+    @FindBy(xpath = "/html/body/div[2]/div/div/div[1]/div[1]/div[2]/a")
+    private WebElement shopBtn;
+    @FindBy(xpath = "/html/body/header/div/div/a[2]")
+    private WebElement cartBtn;
+
     public PaulHomePage(WebDriver driver) {
         this.driver = driver;
         driver.get("https://www.paul-cz.com/");
@@ -34,9 +39,7 @@ public class PaulHomePage {
         searchBtn.click();
     }
 
-//    public void testProductSearch(String product) {
-//        WebElement searchBox = driver.findElement(By.xpath("/html/body/header[1]/div/div/div[1]/form/input[1]"));
-//        searchBox.sendKeys(product);
-//        searchBox.sendKeys(Keys.RETURN);
-//    }
+    public void clickShopBtn() {shopBtn.click();}
+    public void clickCartBtn() {cartBtn.click();}
+
 }
