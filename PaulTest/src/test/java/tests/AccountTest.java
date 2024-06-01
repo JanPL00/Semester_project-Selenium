@@ -3,18 +3,16 @@ package tests;
 import POM.AccountPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 import setup.InitClass;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 import static setup.InitClass.driver;
 
-public class ResgistrationTest {
+public class AccountTest {
 
     AccountPage accountPage;
 
@@ -24,10 +22,10 @@ public class ResgistrationTest {
         accountPage = new AccountPage(driver);
     }
 
-    @AfterEach
-    public void finish() {
-        InitClass.tearDown();
-    }
+//    @AfterEach
+//    public void finish() {
+//        InitClass.tearDown();
+//    }
 
     @Test
     public void testRegistration() {
@@ -43,14 +41,15 @@ public class ResgistrationTest {
     public void testLogin() {
         testUser(logInUser());
     }
-
     @Test
-    public void testPwdChnage() {
+    public void testPwdChnage() { // tohle nefunguje kvuli erroru na strankach, nevim ale jak overit ze se to podarilo
         logInUser();
         accountPage.clickDetails();
+        accountPage.fillName("Name");
+        accountPage.fillSurname("Surname");
         accountPage.changePwd("nejakeheslo", "nejakenoveheslo");
+        accountPage.saveDetails();
     }
-
     @Test
     public void testXSSAttack() { // TODO jeste neni hotova
         logInUser();
@@ -64,7 +63,6 @@ public class ResgistrationTest {
         accountPage.logIn();
         return email;
     }
-
     private void testUser(String email) {
         try {
             String wecomeMsg = driver.findElement(By.xpath("/html/body/div[2]/div/div/p[1]/strong[1]")).getText();
@@ -73,5 +71,4 @@ public class ResgistrationTest {
             fail("Registration failed.");
         }
     }
-
 }

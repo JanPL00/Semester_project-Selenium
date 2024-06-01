@@ -18,9 +18,14 @@ public class ContactPage {
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/div/div/form/div[4]/span/textarea")
     private WebElement message;
+    @FindBy(xpath = "/html/body/div[2]/div[2]/div/div/div/form/div[5]/input")
+    private WebElement submitBtn;
+    @FindBy(xpath = "/html/body/header[2]/h1")
+    private WebElement thankYouMsg;
 
     public ContactPage(WebDriver driver) {
         this.driver = driver;
+        driver.get("https://www.paul-cz.com/kontakt/");
         PageFactory.initElements(driver, this);
     }
 
@@ -28,11 +33,15 @@ public class ContactPage {
         fullName.sendKeys(name.trim() + " " + surname.trim());
     }
     public void fillEmail(String email) {
+        mail.clear();
         mail.sendKeys(email);
     }
     public void fillMessage(String msg) {
         message.sendKeys(msg);
     }
-
+    public void submitMsg() {submitBtn.click();}
+    public String getThankYouMsg() {
+        return thankYouMsg.getText();
+    }
 
 }
