@@ -20,8 +20,8 @@ public class ContactPage {
     private WebElement message;
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/div/div/form/div[5]/input")
     private WebElement submitBtn;
-    @FindBy(xpath = "/html/body/header[2]/h1")
-    private WebElement thankYouMsg;
+//    @FindBy(xpath = "/html/body/header[2]/h1")
+//    private WebElement thankYouMsg;
 
     public ContactPage(WebDriver driver) {
         this.driver = driver;
@@ -40,8 +40,8 @@ public class ContactPage {
         message.sendKeys(msg);
     }
     public void submitMsg() {submitBtn.click();}
-    public String getThankYouMsg() {
-        return thankYouMsg.getText();
-    }
+//    public String getThankYouMsg() {
+//        return thankYouMsg.getText();
+//    }
 
 }

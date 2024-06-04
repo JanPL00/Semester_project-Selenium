@@ -39,6 +39,7 @@ public class AccountTest {
     public void testLogin() {
         testUser(logInUser());
     }
+
     @Test
     public void testPwdChnage() { // tohle nefunguje kvuli erroru na strankach, nevim jak overit ze se to podarilo
         logInUser();

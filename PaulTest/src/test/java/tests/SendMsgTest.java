@@ -1,6 +1,7 @@
 package tests;
 
 import POM.ContactPage;
+import POM.SuccesfullySentPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,11 +18,13 @@ import static setup.InitClass.wait;
 public class SendMsgTest {
 
     ContactPage contactPage;
+    SuccesfullySentPage successfullySentPage;
 
     @BeforeEach
     public void setup() {
         InitClass.initialization();
         contactPage = new ContactPage(driver);
+        successfullySentPage = new SuccesfullySentPage(driver);
     }
 
     @AfterEach
@@ -35,7 +38,7 @@ public class SendMsgTest {
         contactPage.submitMsg();
 
         try {
-            assertEquals("Děkujeme, zpráva byla úspěšně odeslána — PAUL", driver.getTitle(), "Message submit failed.");
+            assertEquals("Děkujeme, zpráva byla úspěšně odeslána", successfullySentPage.getThankYouMsg()); //TODO
         } catch (NoSuchElementException e) {
             fail("Message submit failed.");
         }
