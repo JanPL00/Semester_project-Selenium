@@ -21,13 +21,18 @@ public class ContactPage {
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/div/div/form/div[5]/input")
     private WebElement submitBtn;
-//    @FindBy(xpath = "/html/body/header[2]/h1")
-//    private WebElement thankYouMsg;
+
+    @FindBy(xpath = "/html/body/header[2]/h1")
+    private WebElement thankYouMsg;
 
     public ContactPage(WebDriver driver) {
         this.driver = driver;
         driver.get("https://www.paul-cz.com/kontakt/");
         PageFactory.initElements(driver, this);
+    }
+
+    public void navigateToConfirmationPage() {
+        driver.get("https://www.paul-cz.com/uspesne-odeslano/");
     }
 
     public void fillFullName(String name, String surname) {
@@ -44,9 +49,10 @@ public class ContactPage {
     public void submitMsg() {
         submitBtn.click();
     }
-//    public String getThankYouMsg() {
-//        return thankYouMsg.getText();
-//    }
+
+    public String getThankYouMsg() {
+        return thankYouMsg.getText();
+    }
 
     public WebElement getMail() {
         return mail;
@@ -63,5 +69,7 @@ public class ContactPage {
     public WebElement getMessage() {
         return message;
     }
+
+
 
 }
