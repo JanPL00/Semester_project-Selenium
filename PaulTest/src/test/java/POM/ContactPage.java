@@ -18,6 +18,7 @@ public class ContactPage {
 
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/div/div/form/div[4]/span/textarea")
     private WebElement message;
+
     @FindBy(xpath = "/html/body/div[2]/div[2]/div/div/div/form/div[5]/input")
     private WebElement submitBtn;
 //    @FindBy(xpath = "/html/body/header[2]/h1")
@@ -39,9 +40,28 @@ public class ContactPage {
     public void fillMessage(String msg) {
         message.sendKeys(msg);
     }
-    public void submitMsg() {submitBtn.click();}
+
+    public void submitMsg() {
+        submitBtn.click();
+    }
 //    public String getThankYouMsg() {
 //        return thankYouMsg.getText();
 //    }
+
+    public WebElement getMail() {
+        return mail;
+    }
+
+    public WebElement getSubmitBtn() {
+        return submitBtn;
+    }
+
+    public WebElement getFullName() {
+        return fullName;
+    }
+
+    public WebElement getMessage() {
+        return message;
+    }
 
 }

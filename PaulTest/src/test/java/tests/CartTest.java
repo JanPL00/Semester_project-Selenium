@@ -28,9 +28,9 @@ public class CartTest {
         InitClass.initialization();
         paulHomePage = new PaulHomePage(driver);
     }
-//
-//    @AfterEach
-//    public void finish() {InitClass.tearDown();}
+
+    @AfterEach
+    public void finish() {InitClass.tearDown();}
 
     @Test
     public void testAddAndRemoveProduct() {
