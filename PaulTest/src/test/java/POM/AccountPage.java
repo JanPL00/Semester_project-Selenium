@@ -45,6 +45,8 @@ public class AccountPage {
     private WebElement newPwd;
     @FindBy(xpath = "/html/body/div[2]/div/div/form/fieldset/p[3]/span/input")
     private  WebElement newPwdCheck;
+    @FindBy(xpath = "/html/body/div[2]/div/nav/ul/li[3]/a")
+    private WebElement adressesBtn;
 
     public AccountPage(WebDriver driver) {
 
@@ -83,6 +85,7 @@ public class AccountPage {
     public void checkSignUpAgreement2(Boolean check) {
         gm.clickCheckbox(checkSignUpAgreement2, check);
     }
+
     public void signUp() { signUpBtn.click(); }
 
     public void clickDetails() { detailsBtn.click(); }
@@ -92,6 +95,7 @@ public class AccountPage {
     public void fillName(String name) { this.name.sendKeys(name);}
 
     public void fillSurname(String surname) { this.surname.sendKeys(surname);}
+
     public void changePwd(String currentPwd, String newPwd) {
         this.currentPwd.sendKeys(currentPwd);
         this.newPwd.sendKeys(newPwd);
@@ -99,6 +103,8 @@ public class AccountPage {
     }
 
     public void saveDetails() {saveDetailsBtn.click();}
+
+    public void clickAdresses() {adressesBtn.click();}
 
 
 }
