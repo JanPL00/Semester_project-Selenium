@@ -37,17 +37,14 @@ public class AddressPage {
     @FindBy(xpath = "/html/body/div[2]/div/div/form/div/div/p[11]/span/input")
     private WebElement AddressEmailForm;
 
-    @FindBy(xpath = "/html/body/div[2]/div/div/form/div/p[3]/button")
+    @FindBy(xpath = "/html/body/div[2]/div/div/form/div/p/button")
     private WebElement AddressSaveBtn;
 
-    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[2]/address/text()[1]")
-    private WebElement AddressNameAndSurname;
+    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[2]/address")
+    private WebElement MailingAdressText;
 
-    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[2]/address/text()[2]")
-    private WebElement AddressStreet;
-
-    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[2]/address/text()[3]")
-    private WebElement AddressPscAndCity;
+    @FindBy(xpath = "/html/body/div[2]/div/div/div[2]/div[1]/address")
+    private WebElement BillingAdressText;
 
 
     public AddressPage(WebDriver driver) {
@@ -59,7 +56,7 @@ public class AddressPage {
 
     }
 
-    public void addBillingAddress(String surname, String lastname,String street, String city, String psc, int telephone, String email) {
+    public void addBillingAddress(String surname, String lastname, String street, String city, String psc, int telephone) {
         AddAndEditBillingAddressBtn.click();
         AddressSurnameForm.sendKeys(surname);
         AddressLastnameForm.sendKeys(lastname);
@@ -67,7 +64,7 @@ public class AddressPage {
         AddressCityNameForm.sendKeys(city);
         AddressPscForm.sendKeys(psc);
         AddressTelephoneForm.sendKeys(String.valueOf(telephone));
-        AddressEmailForm.sendKeys(email);
+        //AddressEmailForm.sendKeys(email);
         AddressSaveBtn.click();
     }
 
@@ -130,37 +127,26 @@ public class AddressPage {
     }
 
 
-    public void checkEditedInfo() {
-        checkEditedNameAndSurname();
-        checkEditedStreet();
-        checkEditedPscAndCity();
+    public void checkIfEditedMailingAddressTextContains(String surname, String lastname, String street, String city, String psc) {
+        String address = MailingAdressText.getText();
+        assert address.contains(surname);
+        assert address.contains(lastname);
+        assert address.contains(street);
+        assert address.contains(city);
+        assert address.contains(psc);
 
     }
 
-    private void checkEditedPscAndCity(String actualCity, String actualPsc) {
+    public void checkIfEditedBillingAddressTextContains(String surname, String lastname, String street, String city, String psc) {
+        String address = BillingAdressText.getText();
+        assert address.contains(surname);
+        assert address.contains(lastname);
+        assert address.contains(street);
+        assert address.contains(city);
+        assert address.contains(psc);
 
-        String pscAndCity = AddressPscAndCity.getText();
-        String[] pscAndCityArray = pscAndCity.split(" ");
-        String psc = pscAndCityArray[0];
-        String city = pscAndCityArray[1];
-        assert psc.equals(actualPsc);
-        assert city.equals(actualCity);
     }
 
-    private void checkEditedStreet(String street) {
-        String streetName = AddressStreet.getText();
-        assert streetName.equals(street);
-    }
-
-    private void checkEditedNameAndSurname(String actualSurname, String actualLastname) {
-
-        String nameAndSurname = AddressNameAndSurname.getText();
-        String[] nameAndSurnameArray = nameAndSurname.split(" ");
-        String name = nameAndSurnameArray[0];
-        String surname = nameAndSurnameArray[1];
-        assert name.equals(actualSurname);
-        assert surname.equals(actualLastname);
-    }
 
 
 

@@ -35,8 +35,8 @@ public class EditMailingAdressTest {
 
         accountPage.clickAdresses();
 
-        addressPage.editMailingAddress("Surname3", "Lastname3", "Street3", "City3", "12345");
-
+        addressPage.editMailingAddress("Surname3", "Lastname3", "Street3", "City3", "123 45");
+        addressPage.checkIfEditedMailingAddressTextContains("Surname3", "Lastname3", "Street3", "City3", "123 45");
 
     }
 }
