@@ -50,19 +50,14 @@ public class AccountTest {
     }
 
     @Test
-    public void testPwdChnage() {
+    public void testXSSAttack() {
         logInUser();
         accountPage.clickDetails();
-        accountPage.fillName("Name");
+        accountPage.fillName("(1)\t<script type=\"text/javascript\"> window.alert(\"This is an alert message!\");</script>");
         accountPage.fillSurname("Surname");
-        accountPage.changePwd("nejakeheslo", "nejakenoveheslo");
         accountPage.saveDetails();
-    }
 
-    @Test
-    public void testXSSAttack() { // TODO jeste neni hotova
-        logInUser();
-        accountPage.clickDetails();
+        assertEquals("403 Forbidden", driver.getTitle(), "Inserting a script into the form field should lead to 403 error.");
     }
 
     //Shortcut method
@@ -73,7 +68,6 @@ public class AccountTest {
         accountPage.logIn();
         return email;
     }
-
 
     private void testUser(String email) {
         try {

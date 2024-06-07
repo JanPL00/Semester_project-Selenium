@@ -70,7 +70,6 @@ public class OrderPage {
 
     public OrderPage(WebDriver driver) {
         this.driver = driver;
-        this.driver.get("https://www.paul-cz.com/objednavka/");
         PageFactory.initElements(driver, this);
 
     }
@@ -141,8 +140,6 @@ public class OrderPage {
     public void clickPickUpBtn() {
         pickUpBtn.click();
     }
-
-    // TODO date and time of delivery
 
     public void fillMerciCardNumber(String num) {
         merciCardNumber.sendKeys(num);

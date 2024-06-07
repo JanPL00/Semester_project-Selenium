@@ -37,12 +37,13 @@ public class CartPage {
     public void emptyCart() {emptyCartBtn.click();}
     public void changeQuantity(String quantity) {
         productQuantity.clear();
-        productQuantity.sendKeys("100");
+        productQuantity.sendKeys(quantity);
         refreshCartBtn.click();
     }
-    public void checkOut() {
+    public OrderPage checkOut() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(checkOutBtn));
         checkOutBtn.click();
+        return new OrderPage(driver);
     }
 }
