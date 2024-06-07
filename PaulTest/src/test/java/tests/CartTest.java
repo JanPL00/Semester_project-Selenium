@@ -18,19 +18,21 @@ import static setup.InitClass.driver;
 
 public class CartTest {
 
-    PaulHomePage paulHomePage;
-    CartPage cartPage;
+    private PaulHomePage paulHomePage;
+    private CartPage cartPage;
     private WebDriverWait wait;
 
 
     @BeforeEach
     public void setup() {
+
         InitClass.initialization();
         paulHomePage = new PaulHomePage(driver);
     }
 
     @AfterEach
     public void finish() {InitClass.tearDown();}
+
 
     @Test
     public void testAddAndRemoveProduct() {

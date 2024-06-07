@@ -64,9 +64,9 @@ public class AccountPage {
         loginPassword.sendKeys(pwd);
     }
 
-    public void checkLoginRemeberMe(Boolean check) {
-        gm.clickCheckbox(checkLoginRemeberMe, check);
-    }
+//    public void checkLoginRemeberMe(Boolean check) {
+//        gm.clickCheckbox(checkLoginRemeberMe, check);
+//    }
 
     public void logIn() { logInBtn.click(); }
 
@@ -78,13 +78,13 @@ public class AccountPage {
         signUpPassword.sendKeys(pwd);
     }
 
-    public void checkSignUpAgreement1(Boolean check) {
-        gm.clickCheckbox(checkSignUpAgreement1, check);
-    }
-
-    public void checkSignUpAgreement2(Boolean check) {
-        gm.clickCheckbox(checkSignUpAgreement2, check);
-    }
+//    public void checkSignUpAgreement1(Boolean check) {
+//        gm.clickCheckbox(checkSignUpAgreement1, check);
+//    }
+//
+//    public void checkSignUpAgreement2(Boolean check) {
+//        gm.clickCheckbox(checkSignUpAgreement2, check);
+//    }
 
     public void signUp() { signUpBtn.click(); }
 

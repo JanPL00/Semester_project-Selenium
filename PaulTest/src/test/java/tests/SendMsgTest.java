@@ -18,8 +18,6 @@ public class SendMsgTest {
     @BeforeEach
     public void setup() {
         InitClass.initialization();
-//        this.driver = InitClass.getDriver();
-//        this.wait = new WebDriverWait(driver, Duration.of(20, ChronoUnit.SECONDS));
         contactPage = new ContactPage(InitClass.getDriver());
     }
 

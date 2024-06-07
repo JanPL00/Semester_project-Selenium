@@ -4,6 +4,8 @@ import POM.AccountPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import setup.InitClass;
@@ -25,23 +27,30 @@ public class AccountTest {
     @AfterEach
     public void finish() {InitClass.tearDown();}
 
-    @Test
-    public void testRegistration() {
-        String email = "randomemail@gmail.com";
+    @ParameterizedTest
+    @CsvFileSource(resources = "/registration_dataset.csv", numLinesToSkip = 1)
+    public void testRegistration(String email, String password) {
+
         accountPage.fillSignUpEmail(email);
-        accountPage.fillSignUpPassword("randompwd");
+        accountPage.fillSignUpPassword(password);
         accountPage.signUp();
 
         testUser(email);
     }
 
-    @Test
-    public void testLogin() {
-        testUser(logInUser());
+    @ParameterizedTest
+    @CsvFileSource(resources = "/login_dataset.csv", numLinesToSkip = 1)
+    public void testLogin(String email, String password) {
+
+        accountPage.fillLoginUsernameOrEmail(email);
+        accountPage.fillLoginPassword(password);
+        accountPage.logIn();
+
+        testUser(email);
     }
 
     @Test
-    public void testPwdChnage() { // tohle nefunguje kvuli erroru na strankach, nevim jak overit ze se to podarilo
+    public void testPwdChnage() {
         logInUser();
         accountPage.clickDetails();
         accountPage.fillName("Name");
@@ -49,12 +58,14 @@ public class AccountTest {
         accountPage.changePwd("nejakeheslo", "nejakenoveheslo");
         accountPage.saveDetails();
     }
+
     @Test
     public void testXSSAttack() { // TODO jeste neni hotova
         logInUser();
         accountPage.clickDetails();
     }
 
+    //Shortcut method
     private String logInUser() {
         String email = "nejakydalsiemail@gmail.com";
         accountPage.fillLoginUsernameOrEmail(email);
@@ -62,10 +73,12 @@ public class AccountTest {
         accountPage.logIn();
         return email;
     }
+
+
     private void testUser(String email) {
         try {
-            String wecomeMsg = driver.findElement(By.xpath("/html/body/div[2]/div/div/p[1]/strong[1]")).getText();
-            assertEquals( wecomeMsg, email, "Registration failed.");
+            String welcomeMsg = driver.findElement(By.xpath("/html/body/div[2]/div/div/p[1]/strong[1]")).getText();
+            assertEquals( welcomeMsg, email);
         } catch (NoSuchElementException e) {
             fail("Registration failed.");
         }

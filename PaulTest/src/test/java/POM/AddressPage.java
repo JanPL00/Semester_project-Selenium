@@ -57,6 +57,7 @@ public class AddressPage {
     }
 
     public void addBillingAddress(String surname, String lastname, String street, String city, String psc, int telephone) {
+
         AddAndEditBillingAddressBtn.click();
         AddressSurnameForm.sendKeys(surname);
         AddressLastnameForm.sendKeys(lastname);
@@ -69,6 +70,7 @@ public class AddressPage {
     }
 
     public void editBillingAddress(String surname, String lastname,String street, String city, String psc, int telephone, String email) {
+
         AddAndEditBillingAddressBtn.click();
 
         AddressSurnameForm.clear();
@@ -96,6 +98,7 @@ public class AddressPage {
     }
 
     public void addMailingAddress(String surname, String lastname,String street, String city, String psc) {
+
         AddAndEditMailingAddressBtn.click();
         AddressSurnameForm.sendKeys(surname);
         AddressLastnameForm.sendKeys(lastname);
@@ -106,6 +109,7 @@ public class AddressPage {
     }
 
     public void editMailingAddress(String surname, String lastname,String street, String city, String psc) {
+
         AddAndEditMailingAddressBtn.click();
 
         AddressSurnameForm.clear();
@@ -128,6 +132,7 @@ public class AddressPage {
 
 
     public void checkIfEditedMailingAddressTextContains(String surname, String lastname, String street, String city, String psc) {
+
         String address = MailingAdressText.getText();
         assert address.contains(surname);
         assert address.contains(lastname);
@@ -138,6 +143,7 @@ public class AddressPage {
     }
 
     public void checkIfEditedBillingAddressTextContains(String surname, String lastname, String street, String city, String psc) {
+
         String address = BillingAdressText.getText();
         assert address.contains(surname);
         assert address.contains(lastname);
