@@ -1,0 +1,56 @@
+# ACTS Test Suite Generation: Sat May 18 00:56:09 CEST 2024
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 3
+# Maximum number of values per parameter: 7
+# Number of configurations: 49
+Login_Username,Login_Password,Login_RememberMe
+validUsername,validPassword,false
+validUsername,invalidPassword,true
+validUsername,123654,false
+validUsername,0,true
+validUsername,+-*/,false
+validUsername,-из),true
+validUsername,null,false
+InvalidUsername,validPassword,true
+InvalidUsername,invalidPassword,false
+InvalidUsername,123654,true
+InvalidUsername,0,false
+InvalidUsername,+-*/,true
+InvalidUsername,-из),false
+InvalidUsername,null,true
+123564789,validPassword,false
+123564789,invalidPassword,true
+123564789,123654,false
+123564789,0,false
+123564789,+-*/,true
+123564789,-из),false
+123564789,null,false
+0,validPassword,false
+0,invalidPassword,true
+0,123654,true
+0,0,false
+0,+-*/,true
+0,-из),false
+0,null,false
+-*/,validPassword,false
+-*/,invalidPassword,true
+-*/,123654,true
+-*/,0,true
+-*/,+-*/,true
+-*/,-из),false
+-*/,null,false
+:)),validPassword,false
+:)),invalidPassword,true
+:)),123654,false
+:)),0,false
+:)),+-*/,true
+:)),-из),false
+:)),null,true
+null,validPassword,false
+null,invalidPassword,true
+null,123654,true
+null,0,true
+null,+-*/,true
+null,-из),true
+null,null,true

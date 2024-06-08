@@ -1,0 +1,106 @@
+# ACTS Test Suite Generation: Sat May 18 01:40:30 CEST 2024
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 3
+# Maximum number of values per parameter: 11
+# Number of configurations: 99
+Contact_Name,Contact_Email,Contact_Message
+jenda Palenka,null,consectetur adipiscing elit
+jenda Palenka,john,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+jenda Palenka,qwertz,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+jenda Palenka,aaaaaaaaaaaaaaaaaaaaaaaaa,null
+jenda Palenka,+-/,+-*/
+jenda Palenka,.,:))
+jenda Palenka,:)),john
+jenda Palenka,john@mail.ccc,Lorem ipsum dolor sit amet
+jenda Palenka,123@123.ccc,consectetur adipiscing elit
+asdfg,null,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+asdfg,john,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+asdfg,qwertz,null
+asdfg,aaaaaaaaaaaaaaaaaaaaaaaaa,+-*/
+asdfg,+-/,:))
+asdfg,.,john
+asdfg,:)),Lorem ipsum dolor sit amet
+asdfg,john@mail.ccc,consectetur adipiscing elit
+asdfg,123@123.ccc,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+johnny pp,null,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+johnny pp,john,null
+johnny pp,qwertz,+-*/
+johnny pp,aaaaaaaaaaaaaaaaaaaaaaaaa,:))
+johnny pp,+-/,john
+johnny pp,.,Lorem ipsum dolor sit amet
+johnny pp,:)),consectetur adipiscing elit
+johnny pp,john@mail.ccc,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+johnny pp,123@123.ccc,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+123654,null,null
+123654,john,+-*/
+123654,qwertz,:))
+123654,aaaaaaaaaaaaaaaaaaaaaaaaa,john
+123654,+-/,Lorem ipsum dolor sit amet
+123654,.,consectetur adipiscing elit
+123654,:)),sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+123654,john@mail.ccc,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+123654,123@123.ccc,null
+0,null,+-*/
+0,john,:))
+0,qwertz,john
+0,aaaaaaaaaaaaaaaaaaaaaaaaa,Lorem ipsum dolor sit amet
+0,+-/,consectetur adipiscing elit
+0,.,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+0,:)),quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+0,john@mail.ccc,null
+0,123@123.ccc,+-*/
+10,null,:))
+10,john,john
+10,qwertz,Lorem ipsum dolor sit amet
+10,aaaaaaaaaaaaaaaaaaaaaaaaa,consectetur adipiscing elit
+10,+-/,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+10,.,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+10,:)),null
+10,john@mail.ccc,+-*/
+10,123@123.ccc,:))
++-*/,null,john
++-*/,john,Lorem ipsum dolor sit amet
++-*/,qwertz,consectetur adipiscing elit
++-*/,aaaaaaaaaaaaaaaaaaaaaaaaa,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
++-*/,+-/,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
++-*/,.,null
++-*/,:)),+-*/
++-*/,john@mail.ccc,:))
++-*/,123@123.ccc,john
+-,null,Lorem ipsum dolor sit amet
+-,john,consectetur adipiscing elit
+-,qwertz,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+-,aaaaaaaaaaaaaaaaaaaaaaaaa,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+-,+-/,null
+-,.,+-*/
+-,:)),:))
+-,john@mail.ccc,john
+-,123@123.ccc,Lorem ipsum dolor sit amet
+:)),null,consectetur adipiscing elit
+:)),john,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+:)),qwertz,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+:)),aaaaaaaaaaaaaaaaaaaaaaaaa,null
+:)),+-/,+-*/
+:)),.,:))
+:)),:)),john
+:)),john@mail.ccc,Lorem ipsum dolor sit amet
+:)),123@123.ccc,+-*/
+null,null,consectetur adipiscing elit
+null,john,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+null,qwertz,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+null,aaaaaaaaaaaaaaaaaaaaaaaaa,null
+null,+-/,+-*/
+null,.,:))
+null,:)),john
+null,john@mail.ccc,Lorem ipsum dolor sit amet
+null,123@123.ccc,:))
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,null,consectetur adipiscing elit
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,john,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,qwertz,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,aaaaaaaaaaaaaaaaaaaaaaaaa,null
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,+-/,+-*/
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,.,:))
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,:)),john
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,john@mail.ccc,Lorem ipsum dolor sit amet
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,123@123.ccc,consectetur adipiscing elit

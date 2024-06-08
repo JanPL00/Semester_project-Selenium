@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="Login">
+  <Parameters>
+    <Parameter id="0" name="Login_Username" type="1">
+      <values>
+        <value>validUsername</value>
+        <value>InvalidUsername</value>
+        <value>123564789</value>
+        <value>0</value>
+        <value>-*/</value>
+        <value>:))</value>
+        <value>null</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="1" name="Login_Password" type="1">
+      <values>
+        <value>validPassword</value>
+        <value>invalidPassword</value>
+        <value>123654</value>
+        <value>0</value>
+        <value>+-*/</value>
+        <value>-из)</value>
+        <value>null</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="2" name="Login_RememberMe" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints />
+  <Testset doi="2">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>validUsername</Value>
+      <Value>validPassword</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>validUsername</Value>
+      <Value>invalidPassword</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="2">
+      <Value>3</Value>
+      <Value>validUsername</Value>
+      <Value>123654</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="3">
+      <Value>4</Value>
+      <Value>validUsername</Value>
+      <Value>0</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="4">
+      <Value>5</Value>
+      <Value>validUsername</Value>
+      <Value>+-*/</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="5">
+      <Value>6</Value>
+      <Value>validUsername</Value>
+      <Value>-из)</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="6">
+      <Value>7</Value>
+      <Value>validUsername</Value>
+      <Value>null</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="7">
+      <Value>8</Value>
+      <Value>InvalidUsername</Value>
+      <Value>validPassword</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="8">
+      <Value>9</Value>
+      <Value>InvalidUsername</Value>
+      <Value>invalidPassword</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="9">
+      <Value>10</Value>
+      <Value>InvalidUsername</Value>
+      <Value>123654</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="10">
+      <Value>11</Value>
+      <Value>InvalidUsername</Value>
+      <Value>0</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="11">
+      <Value>12</Value>
+      <Value>InvalidUsername</Value>
+      <Value>+-*/</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="12">
+      <Value>13</Value>
+      <Value>InvalidUsername</Value>
+      <Value>-из)</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="13">
+      <Value>14</Value>
+      <Value>InvalidUsername</Value>
+      <Value>null</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="14">
+      <Value>15</Value>
+      <Value>123564789</Value>
+      <Value>validPassword</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="15">
+      <Value>16</Value>
+      <Value>123564789</Value>
+      <Value>invalidPassword</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="16">
+      <Value>17</Value>
+      <Value>123564789</Value>
+      <Value>123654</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="17">
+      <Value>18</Value>
+      <Value>123564789</Value>
+      <Value>0</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="18">
+      <Value>19</Value>
+      <Value>123564789</Value>
+      <Value>+-*/</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="19">
+      <Value>20</Value>
+      <Value>123564789</Value>
+      <Value>-из)</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="20">
+      <Value>21</Value>
+      <Value>123564789</Value>
+      <Value>null</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="21">
+      <Value>22</Value>
+      <Value>0</Value>
+      <Value>validPassword</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="22">
+      <Value>23</Value>
+      <Value>0</Value>
+      <Value>invalidPassword</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="23">
+      <Value>24</Value>
+      <Value>0</Value>
+      <Value>123654</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="24">
+      <Value>25</Value>
+      <Value>0</Value>
+      <Value>0</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="25">
+      <Value>26</Value>
+      <Value>0</Value>
+      <Value>+-*/</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="26">
+      <Value>27</Value>
+      <Value>0</Value>
+      <Value>-из)</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="27">
+      <Value>28</Value>
+      <Value>0</Value>
+      <Value>null</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="28">
+      <Value>29</Value>
+      <Value>-*/</Value>
+      <Value>validPassword</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="29">
+      <Value>30</Value>
+      <Value>-*/</Value>
+      <Value>invalidPassword</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="30">
+      <Value>31</Value>
+      <Value>-*/</Value>
+      <Value>123654</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="31">
+      <Value>32</Value>
+      <Value>-*/</Value>
+      <Value>0</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="32">
+      <Value>33</Value>
+      <Value>-*/</Value>
+      <Value>+-*/</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="33">
+      <Value>34</Value>
+      <Value>-*/</Value>
+      <Value>-из)</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="34">
+      <Value>35</Value>
+      <Value>-*/</Value>
+      <Value>null</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="35">
+      <Value>36</Value>
+      <Value>:))</Value>
+      <Value>validPassword</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="36">
+      <Value>37</Value>
+      <Value>:))</Value>
+      <Value>invalidPassword</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="37">
+      <Value>38</Value>
+      <Value>:))</Value>
+      <Value>123654</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="38">
+      <Value>39</Value>
+      <Value>:))</Value>
+      <Value>0</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="39">
+      <Value>40</Value>
+      <Value>:))</Value>
+      <Value>+-*/</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="40">
+      <Value>41</Value>
+      <Value>:))</Value>
+      <Value>-из)</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="41">
+      <Value>42</Value>
+      <Value>:))</Value>
+      <Value>null</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="42">
+      <Value>43</Value>
+      <Value>null</Value>
+      <Value>validPassword</Value>
+      <Value>false</Value>
+    </Testcase>
+    <Testcase TCNo="43">
+      <Value>44</Value>
+      <Value>null</Value>
+      <Value>invalidPassword</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="44">
+      <Value>45</Value>
+      <Value>null</Value>
+      <Value>123654</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="45">
+      <Value>46</Value>
+      <Value>null</Value>
+      <Value>0</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="46">
+      <Value>47</Value>
+      <Value>null</Value>
+      <Value>+-*/</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="47">
+      <Value>48</Value>
+      <Value>null</Value>
+      <Value>-из)</Value>
+      <Value>true</Value>
+    </Testcase>
+    <Testcase TCNo="48">
+      <Value>49</Value>
+      <Value>null</Value>
+      <Value>null</Value>
+      <Value>true</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>Login_Username</Value>
+    <Value>Login_Password</Value>
+    <Value>Login_RememberMe</Value>
+  </Header>
+  <Stat-Data>
+    <ExecutionTime>0.013</ExecutionTime>
+    <MaxDomainSize>7</MaxDomainSize>
+    <MinDomainSize>2</MinDomainSize>
+    <TotalNoOfCombination>77</TotalNoOfCombination>
+    <TotalNoOfTests>49</TotalNoOfTests>
+    <Algorithm>IPOG</Algorithm>
+  </Stat-Data>
+</System>
+

@@ -1,0 +1,70 @@
+# ACTS Test Suite Generation: Sat May 18 01:22:06 CEST 2024
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 4
+# Maximum number of values per parameter: 9
+# Number of configurations: 63
+Registration_Email,Registration_Password,Registration_ConsentOffers,Registration_ConsentProfilling
+randomeamil,password1,false,false
+email,password1,true,true
+name@mail.ccc,password1,false,true
+123@123.com,password1,true,false
++-*/,password1,false,true
+:)),password1,true,false
+null,password1,false,true
+randomeamil,PASSWORD2,true,true
+email,PASSWORD2,false,false
+name@mail.ccc,PASSWORD2,true,false
+123@123.com,PASSWORD2,false,true
++-*/,PASSWORD2,true,false
+:)),PASSWORD2,false,true
+null,PASSWORD2,true,false
+randomeamil,123654,false,true
+email,123654,true,false
+name@mail.ccc,123654,false,false
+123@123.com,123654,true,false
++-*/,123654,false,true
+:)),123654,false,true
+null,123654,false,false
+randomeamil,0,false,true
+email,0,true,false
+name@mail.ccc,0,true,true
+123@123.com,0,true,false
++-*/,0,false,false
+:)),0,false,true
+null,0,false,true
+randomeamil,11235789844562314,false,true
+email,11235789844562314,true,false
+name@mail.ccc,11235789844562314,true,true
+123@123.com,11235789844562314,true,true
++-*/,11235789844562314,true,false
+:)),11235789844562314,true,true
+null,11235789844562314,false,true
+randomeamil,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,false,true
+email,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,true,false
+name@mail.ccc,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,false,false
+123@123.com,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,true,true
++-*/,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,false,true
+:)),aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,true,true
+null,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,false,false
+randomeamil,+-*/,false,true
+email,+-*/,true,false
+name@mail.ccc,+-*/,false,false
+123@123.com,+-*/,true,false
++-*/,+-*/,false,false
+:)),+-*/,false,false
+null,+-*/,false,true
+randomeamil,:)),false,true
+email,:)),true,false
+name@mail.ccc,:)),false,true
+123@123.com,:)),false,false
++-*/,:)),false,false
+:)),:)),true,false
+null,:)),true,true
+randomeamil,null,false,true
+email,null,true,false
+name@mail.ccc,null,false,true
+123@123.com,null,false,false
++-*/,null,false,true
+:)),null,true,true
+null,null,true,true
