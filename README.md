@@ -3,7 +3,7 @@
 ## Description 📝
 
 This is the final version of a university semester project that I completed with a colleague for the Software Testing class I attended.
-The purpose of this project was to demonstrate a knowledge of web testing.
+The purpose of this project is to demonstrate a knowledge of web testing.
 An online bakery e-shop, of a company [Paul](https://www.paul-cz.com/), was chosen as the testing object.
 
 ## Specification ⚙️
